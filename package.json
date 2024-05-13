@@ -1,0 +1,32 @@
+{
+  "name": "@apiverve/sunposition",
+  "version": "1.0.0",
+  "description": "Sun Position is a simple tool for getting sun position data. It returns data such as sunrise, sunset, solar noon, and more based on the location provided.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/sunposition-API.git"
+  },
+  "keywords": [
+    "sun position"," sun position api"," sun position tool"," sun position software"," sun position service"," sun position library"," sun position sdk"," sun position code"," sun position script"," sun position program"," sun position application"," sun position app"," sun position utility"," sun position helper"," sun position helper tool"," sun position helper software"," sun position helper service"," sun position helper library"," sun position helper sdk"," sun position helper code"," sun position helper script"," sun position helper program"," sun position helper application"," sun position helper app"," sun position helper utility"," sun position helper"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/sunposition-API/issues"
+  },
+  "homepage": "https://github.com/apiverve/sunposition-API",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "chai": "^3.4.1",
+    "dotenv": "^2.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "3.3.2",
+    "promise": "^7.1.1",
+    "request": "^2.69.0"
+  }
+}
