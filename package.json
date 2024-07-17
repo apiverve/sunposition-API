@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/sunposition",
-  "version": "1.0.2",
-  "description": "Sun Position is a simple tool for getting sun position data. It returns data such as sunrise, sunset, solar noon, and more based on the location provided.",
+  "version": "1.0.3",
+  "description": "Sun Position is a simple tool for getting sun position data. It returns data such as altitude, azimuth, and distance of the sun from the location provided.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
