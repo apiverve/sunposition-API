@@ -74,12 +74,11 @@ api.execute(query, function (error, data) {
   "data": {
     "coordinates": {
       "latitude": 37.7749,
-      "longitude": -122.4194,
-      "valid": true
+      "longitude": -122.4194
     },
     "sun": {
-      "altitude": -0.54307120867939784,
-      "azimuth": 2.5559735834198039
+      "altitude": -0.6914736442326237,
+      "azimuth": -2.6370031723759024
     }
   },
   "code": 200
