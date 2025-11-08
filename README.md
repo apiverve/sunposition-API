@@ -1,5 +1,4 @@
-Sun Position API
-============
+# Sun Position API
 
 Sun Position is a simple tool for getting sun position data. It returns data such as altitude, azimuth, and distance of the sun from the location provided.
 
@@ -7,56 +6,64 @@ Sun Position is a simple tool for getting sun position data. It returns data suc
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Javascript Wrapper for the [Sun Position API](https://apiverve.com/marketplace/api/sunposition)
+This is a Javascript Wrapper for the [Sun Position API](https://apiverve.com/marketplace/sunposition)
 
 ---
 
 ## Installation
-	npm install @apiverve/sunposition --save
+
+Using npm:
+```shell
+npm install @apiverve/sunposition
+```
+
+Using yarn:
+```shell
+yarn add @apiverve/sunposition
+```
 
 ---
 
 ## Configuration
 
-Before using the sunposition API client, you have to setup your account and obtain your API Key.  
+Before using the Sun Position API client, you have to setup your account and obtain your API Key.
 You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ---
 
-## Usage
+## Quick Start
 
-The Sun Position API documentation is found here: [https://docs.apiverve.com/api/sunposition](https://docs.apiverve.com/api/sunposition).  
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+
+The Sun Position API documentation is found here: [https://docs.apiverve.com/ref/sunposition](https://docs.apiverve.com/ref/sunposition).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
-```
-var sunpositionAPI = require('@apiverve/sunposition');
-var api = new sunpositionAPI({
-    api_key: [YOUR_API_KEY],
-    secure: true //(Optional, defaults to true)
+```javascript
+const sunpositionAPI = require('@apiverve/sunposition');
+const api = new sunpositionAPI({
+    api_key: '[YOUR_API_KEY]'
 });
 ```
 
 ---
 
+## Usage
+
+---
 
 ### Perform Request
-Using the API client, you can perform requests to the API.
 
-###### Define Query
+Using the API is simple. All you have to do is make a request. The API will return a response with the data you requested.
 
-```
+```javascript
 var query = {
   lat: 37.7749,
   lon: -122.4194,
-  date: "03-27-2025"
+  date: "11-07-2025"
 };
-```
 
-###### Simple Request (using Callback)
-
-```
 api.execute(query, function (error, data) {
     if (error) {
         return console.error(error);
@@ -66,9 +73,56 @@ api.execute(query, function (error, data) {
 });
 ```
 
-###### Example Response
+---
 
+### Using Promises
+
+You can also use promises to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+var query = {
+  lat: 37.7749,
+  lon: -122.4194,
+  date: "11-07-2025"
+};
+
+api.execute(query)
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 ```
+
+---
+
+### Using Async/Await
+
+You can also use async/await to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+async function makeRequest() {
+    var query = {
+  lat: 37.7749,
+  lon: -122.4194,
+  date: "11-07-2025"
+};
+
+    try {
+        const data = await api.execute(query);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+---
+
+## Example Response
+
+```json
 {
   "status": "ok",
   "error": null,
@@ -82,8 +136,7 @@ api.execute(query, function (error, data) {
       "altitude": 0.34488656913202226,
       "azimuth": 1.0048051768374293
     }
-  },
-  "code": 200
+  }
 }
 ```
 
@@ -96,6 +149,7 @@ Need any assistance? [Get in touch with Customer Support](https://apiverve.com/c
 ---
 
 ## Updates
+
 Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
 
 ---
